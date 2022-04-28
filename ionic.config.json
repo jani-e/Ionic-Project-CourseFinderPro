@@ -1,0 +1,7 @@
+{
+  "name": "CourseFinderPro",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
