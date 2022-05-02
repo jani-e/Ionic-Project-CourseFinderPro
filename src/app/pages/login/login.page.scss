@@ -1,0 +1,32 @@
+p {
+    text-align: center;
+}
+/* Header */
+ion-header {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Content */
+ion-content {
+    ion-list {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .buttons {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Footer */
+ion-footer {
+    height: 10%;
+    ion-buttons {
+        justify-content: center;
+    }
+}
