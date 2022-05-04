@@ -1,20 +1,13 @@
-p {
-    text-align: center;
-}
-/* Header */
-ion-header {
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
 /* Content */
 ion-content {
-    ion-list {
+    img {
         width: 60%;
-        margin-left: auto;
-        margin-right: auto;
+    }
+    ion-card-title {
+        text-align: center;
+    }
+    ion-card-subtitle {
+        text-align: center;
     }
     .buttons {
         width: 80%;

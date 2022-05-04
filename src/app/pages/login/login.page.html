@@ -1,27 +1,19 @@
-<ion-header class="ion-no-border">
-  <ion-list>
-    <ion-item>
-      <img src="" alt="LOGO">
-    </ion-item>
-    <ion-item>
-      <h1>CourseFinderPro</h1>
-    </ion-item>
-    <ion-item>
-      <p>Find your course in life</p>
-    </ion-item>
-  </ion-list>
-</ion-header>
-
 <ion-content>
-  <ion-list>
-    <ion-item>
-      <p>Log in to get the full experience of the app</p>
-    </ion-item>
-  </ion-list>
-  <div class="buttons">
-    <ion-button expand="block" (click)="home()">Sign up with Facebook</ion-button>
-    <ion-button expand="block" (click)="home()">Sign up with Instagram</ion-button>
-  </div>
+  <div  class="flex-center">
+  <ion-card>
+    <img src="https://www.logolynx.com/images/logolynx/e1/e1f7b2d65c30e86f509c4ef5cba31ac0.jpeg" /> <!--replace with app logo-->
+    <ion-card-header>
+      <ion-card-title>CourseFinderPro</ion-card-title>
+      <ion-card-subtitle>Log in to get the full experience of the app</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="buttons">
+        <ion-button expand="block" (click)="home()">Sign up with Facebook</ion-button>
+        <ion-button expand="block" (click)="home()">Sign up with Instagram</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</div>
 </ion-content>
 
 <ion-footer class="ion-no-border">
