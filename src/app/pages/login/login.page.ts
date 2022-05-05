@@ -13,8 +13,16 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  home() {
+  skipToHome() {
     this.router.navigate(['home']);
+  }
+
+  signWithGoogle() {
+    this.skipToHome();
+  }
+
+  signWithCredentials() {
+    this.skipToHome();
   }
 
 }
