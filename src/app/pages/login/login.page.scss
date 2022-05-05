@@ -2,6 +2,7 @@
 ion-content {
     img {
         width: 60%;
+        margin-top: 15px;
     }
     ion-card-title {
         text-align: center;
@@ -19,7 +20,4 @@ ion-content {
 /* Footer */
 ion-footer {
     height: 10%;
-    ion-buttons {
-        justify-content: center;
-    }
 }

@@ -1,25 +1,29 @@
-<ion-content>
-  <div  class="flex-center">
-  <ion-card>
-    <img src="https://www.logolynx.com/images/logolynx/e1/e1f7b2d65c30e86f509c4ef5cba31ac0.jpeg" /> <!--replace with app logo-->
-    <ion-card-header>
-      <ion-card-title>CourseFinderPro</ion-card-title>
-      <ion-card-subtitle>Log in to get the full experience of the app</ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      <div class="buttons">
-        <ion-button expand="block" (click)="home()">Sign up with Facebook</ion-button>
-        <ion-button expand="block" (click)="home()">Sign up with Instagram</ion-button>
+<ion-content class="no-scroll">
+  <div class="flex-center">
+    <ion-card>
+      <div class="flex-center">
+        <img src="https://www.logolynx.com/images/logolynx/e1/e1f7b2d65c30e86f509c4ef5cba31ac0.jpeg" />
+        <!--replace with app logo-->
       </div>
-    </ion-card-content>
-  </ion-card>
-</div>
+      <ion-card-header>
+        <ion-card-title>CourseFinderPro</ion-card-title>
+        <ion-card-subtitle>Find your course in life</ion-card-subtitle>
+        <ion-card-subtitle>Log in to get the full experience</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="buttons">
+          <ion-button expand="block" (click)="signWithGoogle()" color="primary">
+            <ion-icon slot="start" name="logo-google"></ion-icon>Sign up with Google
+          </ion-button>
+          <ion-button expand="block" (click)="signWithCredentials()" color="primary">
+            <ion-icon slot="start" name="log-in-outline"></ion-icon>Sign up with Credentials
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
 
 <ion-footer class="ion-no-border">
-  <ion-toolbar>
-    <ion-buttons>
-      <ion-button (click)="home()" color="tertiary">Skip</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
+  <ion-button fill="clear" expand="full" (click)="skipToHome()" color="medium">Skip</ion-button>
 </ion-footer>
