@@ -2,9 +2,17 @@
     <ion-split-pane contentId="main-content">
         <ion-menu contentId="main-content" type="overlay">
             <ion-content>
-                <ion-list id="inbox-list">
-                    <ion-list-header>CourseFinderPro</ion-list-header>
-                    <ion-note>elonmusk@coursefinderpro.com</ion-note>
+                <ion-card>
+                    <img src="https://p1.pxfuel.com/preview/997/777/81/person-thumbs-up-smiling-success.jpg" />
+                    <ion-card-header>
+
+                        <ion-card-title>Test User</ion-card-title>
+                    </ion-card-header>
+
+                </ion-card>
+                <ion-list id="content-list">
+
+
 
                     <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
                         <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
