@@ -9,13 +9,13 @@
       </ion-card-header>
       <ion-card-content>
         <div class="buttons">
-          <ion-button expand="block" (click)="signWithGoogle()" color="tertiary">
+          <ion-button expand="block" (click)="loginWithGoogle()" color="tertiary">
             <ion-icon slot="start" name="logo-google"></ion-icon>
-            <p>Sign up with Google</p>
+            <p>Log in with Google</p>
           </ion-button>
-          <ion-button expand="block" (click)="signWithCredentials()" color="tertiary">
+          <ion-button id="log-in-button" expand="block" color="tertiary">
             <ion-icon slot="start" name="log-in-outline"></ion-icon>
-            <p>Sign up with Credentials</p>
+            <p>Log in with Credentials</p>
           </ion-button>
         </div>
       </ion-card-content>
@@ -26,3 +26,36 @@
 <ion-footer class="ion-no-border">
   <ion-button fill="clear" expand="full" (click)="skipToHome()" color="medium">Skip</ion-button>
 </ion-footer>
+
+<ion-modal trigger="log-in-button" [breakpoints]="[0.1, 0.5, 1]" [initialBreakpoint]="0.5">
+  <ng-template>
+    <ion-content class="no-scroll">
+      <ion-header translucent>
+        <ion-toolbar>
+          <ion-title>Log in</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="dismissModal()">Cancel</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content fullscreen class="no-scroll">
+        <ion-list>
+          <ion-item class="ion-no-padding">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" inputmode="email" [(ngModel)]="email"></ion-input>
+          </ion-item>
+          <ion-item class="ion-no-padding">
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" [(ngModel)]="password"></ion-input>
+          </ion-item>
+        </ion-list>
+        <div class="buttons">
+        <ion-button expand="block" (click)="loginWithCredentials()" color="tertiary">
+          <ion-icon slot="start" name="log-in-outline"></ion-icon>
+          Log in
+        </ion-button>
+      </div>
+      </ion-content>
+    </ion-content>
+  </ng-template>
+</ion-modal>

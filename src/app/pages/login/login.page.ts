@@ -1,5 +1,6 @@
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private modalController: ModalController) { }
+
+  @Input() email: string;
+  @Input() password: string;
 
   ngOnInit() {
   }
@@ -17,12 +21,23 @@ export class LoginPage implements OnInit {
     this.router.navigate(['home']);
   }
 
-  signWithGoogle() {
+  loginWithGoogle() {
     this.skipToHome();
   }
 
-  signWithCredentials() {
-    this.skipToHome();
+  loginWithCredentials() {
+    if (this.email === "test@test.com" && this.password === "1234") {
+      this.dismissModal();
+      this.skipToHome();
+    } else {
+      console.log("not ok")
+    }
+  }
+
+  dismissModal() {
+    this.modalController.dismiss({
+      'dismissed': true
+    });
   }
 
 }
