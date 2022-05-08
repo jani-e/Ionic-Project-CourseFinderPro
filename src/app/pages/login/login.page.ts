@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { AlertController, ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +9,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private router: Router, private modalController: ModalController) { }
+  constructor(private router: Router, private modalController: ModalController, private alertController: AlertController) { }
 
   @Input() email: string;
   @Input() password: string;
@@ -21,8 +21,21 @@ export class LoginPage implements OnInit {
     this.router.navigate(['home']);
   }
 
-  loginWithGoogle() {
-    this.skipToHome();
+  async loginWithGoogle() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Google',
+      subHeader: 'Log in with Google?',
+      buttons: ['Cancel', 'Log in']
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+
+    if (!(role === 'cancel')) {
+      this.skipToHome();
+    }
   }
 
   loginWithCredentials() {
@@ -39,5 +52,7 @@ export class LoginPage implements OnInit {
       'dismissed': true
     });
   }
+
+  
 
 }
