@@ -38,3 +38,26 @@
 .no-scroll {
     --overflow: hidden !important;
 }
+
+/* Forced centering, Ionic sometimes doesn't center its alert components */
+.custom-alert .alert-wrapper {
+    .alert-title {
+        text-align: center;
+    }
+    .alert-sub-title {
+        text-align: center;
+    }
+    
+    .alert-message {
+        text-align: center;
+    }
+    
+    .alert-button-inner {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    div {
+          justify-content: center;
+    }
+}

@@ -1,17 +1,20 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Schedule</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 <div id="content">
 
-  <div class="course">
+  <div color="medium" class="course">
     <ion-grid>
       <ion-row>
         <ion-col class="courseName">
-          Course name
+          Course 1
         </ion-col>
         <ion-col >
         </ion-col>
@@ -26,7 +29,7 @@
         <ion-col >
         </ion-col>
         <ion-col >
-          <ion-button size="small" (click)="details()">
+          <ion-button color="light" size="small" (click)="details1()">
             <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
           </ion-button>
         </ion-col>
@@ -38,5 +41,70 @@
       </ion-row>
     </ion-grid>
   </div>
+
+  <div class="course">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="courseName">
+          Course 2
+        </ion-col>
+        <ion-col >
+        </ion-col>
+        <ion-col >
+          <ion-icon name="image-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="courseStatus">
+          Course status
+        </ion-col>
+        <ion-col >
+        </ion-col>
+        <ion-col >
+          <ion-button color="light" size="small" (click)="details2()">
+            <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col >
+          dd.mm.yyyy hh:mm
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="course">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="courseName">
+          Course 3
+        </ion-col>
+        <ion-col >
+        </ion-col>
+        <ion-col >
+          <ion-icon name="image-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="courseStatus">
+          Course status
+        </ion-col>
+        <ion-col >
+        </ion-col>
+        <ion-col >
+          <ion-button color="light" size="small" (click)="details3()">
+            <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col >
+          dd.mm.yyyy hh:mm
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
 </div>
 </ion-content>
