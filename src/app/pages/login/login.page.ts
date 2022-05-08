@@ -23,7 +23,7 @@ export class LoginPage implements OnInit {
 
   async loginWithGoogle() {
     const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
+      cssClass: 'login-with-google',
       header: 'Google',
       subHeader: 'Log in with Google?',
       buttons: ['Cancel', 'Log in']
@@ -39,12 +39,31 @@ export class LoginPage implements OnInit {
   }
 
   loginWithCredentials() {
-    if (this.email === "test@test.com" && this.password === "1234") {
+    if (this.email === "user@test.com" && this.password === "1234") {
       this.dismissModal();
+      this.clearCredentials()
       this.skipToHome();
     } else {
-      console.log("not ok")
+      this.clearCredentials()
+      this.invalidLoginAlert();
     }
+  }
+
+  clearCredentials() {
+    this.email = null;
+    this.password = null;
+  }
+
+  async invalidLoginAlert() {
+    const alert = await this.alertController.create({
+      cssClass: 'invalid-login-alert',
+      header: 'Login failed',
+      subHeader: 'Invalid email or password',
+      message: 'Hint: user@test.com, 1234',
+      buttons: ['OK']
+    });
+
+    await alert.present();
   }
 
   dismissModal() {
