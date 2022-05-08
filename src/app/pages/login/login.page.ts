@@ -23,7 +23,7 @@ export class LoginPage implements OnInit {
 
   async loginWithGoogle() {
     const alert = await this.alertController.create({
-      cssClass: 'login-with-google',
+      cssClass: 'custom-alert',
       header: 'Google',
       subHeader: 'Log in with Google?',
       buttons: ['Cancel', 'Log in']
@@ -56,7 +56,7 @@ export class LoginPage implements OnInit {
 
   async invalidLoginAlert() {
     const alert = await this.alertController.create({
-      cssClass: 'invalid-login-alert',
+      cssClass: 'custom-alert',
       header: 'Login failed',
       subHeader: 'Invalid email or password',
       message: 'Hint: user@test.com, 1234',
