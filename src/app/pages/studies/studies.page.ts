@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SkillTree } from 'src/assets/skilltree.js';
 
 @Component({
   selector: 'app-studies',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudiesPage implements OnInit {
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
+	
+	//This triggers after html content is loaded on the page.
+	ngAfterViewInit() {
+		let st = new SkillTree("#skilltree","div")
+	}
 
+	ngAfterViewChecked() {
+    
+	}
 }
