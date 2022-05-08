@@ -5,7 +5,9 @@
         <img src="../../../assets/logo.png" />
       </div>
       <ion-card-header>
-        <ion-card-subtitle>Log in to get the full experience</ion-card-subtitle>
+        <ion-card-subtitle>
+          <p>Log in to get the full experience</p>
+        </ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
         <div class="buttons">
@@ -50,11 +52,11 @@
           </ion-item>
         </ion-list>
         <div class="buttons">
-        <ion-button expand="block" (click)="loginWithCredentials()" color="tertiary">
-          <ion-icon slot="start" name="log-in-outline"></ion-icon>
-          Log in
-        </ion-button>
-      </div>
+          <ion-button expand="block" (click)="loginWithCredentials()" color="success">
+            <ion-icon slot="start" name="log-in-outline"></ion-icon>
+            Log in
+          </ion-button>
+        </div>
       </ion-content>
     </ion-content>
   </ng-template>
