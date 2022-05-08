@@ -45,16 +45,16 @@ export class SkillTree {
 		this.studyBoxses = []
 		this.nodeStart = []
 		this.courseData = {
-			0: {name:"Tutustuminen",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[]},
+			0: {name:"Tutustuminen",teacher:"Jaska Jokunen",info:"This is the schools introduction course",connections:[]},
 			1: {name:"Ohjelmointi perusteet 1",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[0]},
-			2: {name:"Jodlauksen alkeistuokio",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[0]},
+			2: {name:"Jodlauksen alkeistuokio",teacher:"Jaska Jokunen",info:"This course goes through the basics of signing.",connections:[0]},
 			3: {name:"Miedot alkoholijuomat",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[0]},
 			4: {name:"Python perusteet",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[0]},
-			5: {name:"Python jatkokurssi",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[4]},
+			5: {name:"Python jatkokurssi",teacher:"Jaska Jokunen",info:"This course continues learning about python programming lanquage.",connections:[4]},
 			6: {name:"Ohjelmointi perusteet 6",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[5]},
 			7: {name:"Ohjelmointi perusteet 6",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[5]},
 			8: {name:"Ohjelmointi jarkokurssi",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[1]},
-			9: {name:"Rakenteet ja algorytmit",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[8]},
+			9: {name:"Rakenteet ja algorytmit",teacher:"Jaska Jokunen",info:"In this course we will learn more about algorithms.",connections:[8]},
 			10: {name:"Diskriitti matematiikka",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[9]},
 			11: {name:"Rekursiivisuutta ja rakkautta",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[9]}
 		}
@@ -175,9 +175,8 @@ class DivRender {
 
 	//Render a box which has all the study information,
 	drawStudyBox(box,x,y,isRoot=false) {
-
 		let template = `
-			<ion-card style="top:${y}px;left:${x}px; width:250px; position:absolute;">
+			<ion-card style="top:${y}px;left:${x}px; width:250px; position:absolute;" button data-iscourse='true' data-teatcher='${box.teacher}' data-coursename='${box.courseName}'data-info='${box.info}')" >
 				<ion-card-header>
 					<ion-card-subtitle>${box.teacher}</ion-card-subtitle>
 					<ion-card-title>${box.courseName}</ion-card-title>
@@ -186,12 +185,7 @@ class DivRender {
 				<ion-card-content>${box.info}</ion-card-content>
 			</ion-card>
 			`
-
-
 		this.html += template
 		this.canvas.innerHTML = this.html
 	}
-
 }
-
-
