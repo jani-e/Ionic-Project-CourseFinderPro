@@ -173,15 +173,8 @@ class DivRender {
 		this.offsetY = 25
 	}
 
+	//Render a box which has all the study information,
 	drawStudyBox(box,x,y,isRoot=false) {
-		/*
-		let template = `
-			<div class="StudyBox" style="top:${x}px;left:${y}px;">
-				<h4>${box.courseName}</h4>
-				<p>${box.info}</p>
-			</div>
-		`
-		*/
 
 		let template = `
 			<ion-card style="top:${y}px;left:${x}px; width:250px; position:absolute;">

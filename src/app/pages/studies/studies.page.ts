@@ -8,17 +8,13 @@ import { SkillTree } from 'src/assets/skilltree.js';
 })
 export class StudiesPage implements OnInit {
 
-	constructor() { }
+	constructor() {}
 
-	ngOnInit() {
-	}
+	ngOnInit() {}
 	
 	//This triggers after html content is loaded on the page.
 	ngAfterViewInit() {
+		
 		let st = new SkillTree("#skilltree","div")
-	}
-
-	ngAfterViewChecked() {
-    
 	}
 }
