@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
-import { AlertController, ModalController } from '@ionic/angular';
+import { AlertController, MenuController, ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +9,9 @@ import { AlertController, ModalController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private router: Router, private modalController: ModalController, private alertController: AlertController) { }
+  constructor(private router: Router, private modalController: ModalController, private alertController: AlertController, private menuCtrl: MenuController) {
+    this.menuCtrl.swipeGesture(false);
+  }
 
   @Input() email: string;
   @Input() password: string;
