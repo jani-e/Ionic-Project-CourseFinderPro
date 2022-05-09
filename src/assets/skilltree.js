@@ -45,13 +45,13 @@ export class SkillTree {
 		this.studyBoxses = []
 		this.nodeStart = []
 		this.courseData = {
-			0: {name:"Tutustuminen",teacher:"Jaska Jokunen",info:"This is the schools introduction course",connections:[]},
+			0: {name:"Tutustuminen",teacher:"Topi-Veikko Tuusa",info:"This is the schools introduction course",connections:[]},
 			1: {name:"Ohjelmointi perusteet 1",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[0]},
 			2: {name:"Jodlauksen alkeistuokio",teacher:"Jaska Jokunen",info:"This course goes through the basics of signing.",connections:[0]},
-			3: {name:"Miedot alkoholijuomat",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[0]},
-			4: {name:"Python perusteet",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[0]},
+			3: {name:"Miedot alkoholijuomat",teacher:"Esko Perkko",info:"In this course we take a deep dive into alcohol!",connections:[0]},
+			4: {name:"Python perusteet",teacher:"Kim Jägermalm",info:"This course is about basics of programming.",connections:[0]},
 			5: {name:"Python jatkokurssi",teacher:"Jaska Jokunen",info:"This course continues learning about python programming lanquage.",connections:[4]},
-			6: {name:"Ohjelmointi perusteet 6",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[5]},
+			6: {name:"Web development with css",teacher:"Jani Eriksson",info:"This course is about basics of programming.",connections:[5]},
 			7: {name:"Ohjelmointi perusteet 6",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[5]},
 			8: {name:"Ohjelmointi jarkokurssi",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[1]},
 			9: {name:"Rakenteet ja algorytmit",teacher:"Jaska Jokunen",info:"In this course we will learn more about algorithms.",connections:[8]},
@@ -91,7 +91,7 @@ export class SkillTree {
 			}
 		}
 		
-		this.rend.drawStudyBox(node,(250*node.x),(150*node.y),isRoot)
+		this.rend.drawStudyBox(node,(275*node.x),(200*node.y),isRoot)
 		for (let b = 0; b < this.studyBoxses.length; b++) {
 			let element = this.studyBoxses[b]
 			
