@@ -39,7 +39,7 @@ export class LoginPage implements OnInit {
   }
 
   loginWithCredentials() {
-    if (this.email === "user@test.com" && this.password === "1234") {
+    if (this.email === "lenora@laurea.fi" && this.password === "1234") {
       this.dismissModal();
       this.clearCredentials()
       this.skipToHome();
@@ -59,7 +59,7 @@ export class LoginPage implements OnInit {
       cssClass: 'custom-alert',
       header: 'Login failed',
       subHeader: 'Invalid email or password',
-      message: 'Hint: user@test.com, 1234',
+      message: 'Hint: lenora@laurea.fi, 1234',
       buttons: ['OK']
     });
 
