@@ -15,13 +15,13 @@ export class SchedulePage implements OnInit {
   }
 
   details1() {
-    alert("Here is information about the course 1.")
+    alert("First day of school - introductions")
   }
   details2() {
-    alert("This button gives additional information about the course 2.")
+    alert("Starter course for Java language coding.")
   }
   details3() {
-    alert("This button gives you more details or maybe even a link to the course 3.")
+    alert("Starter course for Python language coding.")
   }
 
 
