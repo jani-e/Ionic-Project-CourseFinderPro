@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 import { SkillTree } from 'src/assets/skilltree.js';
 
 @Component({
@@ -8,7 +9,9 @@ import { SkillTree } from 'src/assets/skilltree.js';
 })
 export class StudiesPage implements OnInit {
 
-	constructor() {}
+	constructor(private menuCtrl: MenuController) {
+		this.menuCtrl.swipeGesture(false);
+	  }
 
 	ngOnInit() {}
 	
