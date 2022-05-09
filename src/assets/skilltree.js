@@ -6,6 +6,7 @@ https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Mob
 
 */
 
+
 //This code block is for automaticly starting the javascript when page is loaded.
 //It is not needed in our case when using Ionic
 const runAutomaticly = false
@@ -44,6 +45,7 @@ export class SkillTree {
 		this.renderType = renderType
 		this.studyBoxses = []
 		this.nodeStart = []
+		/*
 		this.courseData = {
 			0: {name:"Tutustuminen",teacher:"Topi-Veikko Tuusa",info:"This is the schools introduction course",connections:[]},
 			1: {name:"Ohjelmointi perusteet 1",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[0]},
@@ -58,6 +60,13 @@ export class SkillTree {
 			10: {name:"Diskriitti matematiikka",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[9]},
 			11: {name:"Rekursiivisuutta ja rakkautta",teacher:"Jaska Jokunen",info:"This course is about basics of programming.",connections:[9]}
 		}
+		*/
+		this.courseData = courseData
+
+
+	  
+
+
 
 		//Convert course data into StudyBox objects.
 		for (const [key1, value1] of Object.entries(this.courseData)) {
